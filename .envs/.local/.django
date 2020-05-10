@@ -2,3 +2,5 @@
 # ------------------------------------------------------------------------------
 USE_DOCKER=yes
 IPYTHONDIR=/app/.ipython
+FACEBOOK_APP_ID=461460001330325
+FACEBOOK_SECRET_KEY=30928f29a205696531428258494412a1
