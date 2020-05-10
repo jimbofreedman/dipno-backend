@@ -288,6 +288,7 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 50,
     'DEFAULT_PARSER_CLASSES': (
         'rest_framework_json_api.parsers.JSONParser',
+        'rest_framework.parsers.JSONParser',
         'rest_framework.parsers.FormParser',
         'rest_framework.parsers.MultiPartParser'
     ),
