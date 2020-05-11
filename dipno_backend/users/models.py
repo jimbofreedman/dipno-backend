@@ -18,10 +18,6 @@ class User(AbstractUser):
     available_from = TimeField(null=True, blank=True)
     available_to = TimeField(null=True, blank=True)
 
-    facebook_id = CharField(max_length=200, unique=True)
-    profile_image = CharField(max_length=300, blank=True)
-    gender = CharField(max_length=10, blank=True)
-
     def get_absolute_url(self):
         return reverse("users:detail", kwargs={"username": self.username})
 
