@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.contrib.auth.models import AbstractUser
-from django.db.models import CharField, TimeField, BigIntegerField
+from django.db.models import CharField, TimeField, BigIntegerField, TextField
 from django.urls import reverse
 from django.db.models.signals import post_save
 from django.dispatch import receiver
@@ -18,6 +18,8 @@ class User(AbstractUser):
     facebook_id = BigIntegerField(null=True, blank=True)
     facebook_username = CharField(max_length=32, null=True, blank=True)
     facebook_link = CharField(max_length=256, null=True, blank=True)
+
+    interests = TextField(null=True, blank=True)
 
     def get_absolute_url(self):
         return reverse("users:detail", kwargs={"username": self.username})
