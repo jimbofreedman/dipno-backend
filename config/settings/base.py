@@ -281,7 +281,7 @@ SOCIALACCOUNT_ADAPTER = "dipno_backend.users.adapters.SocialAccountAdapter"
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework.authentication.SessionAuthentication",
-        "rest_framework_social_oauth2.authentication.SocialAuthentication",
+        "dipno.authentication.Oauth2Authentication",
     ),
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
     'EXCEPTION_HANDLER': 'rest_framework_json_api.exceptions.exception_handler',
