@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from dipno.models import Match
+
+
+class MatchAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(Match, MatchAdmin)
